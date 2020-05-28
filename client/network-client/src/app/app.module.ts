@@ -6,11 +6,15 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
+import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SubscriptionComponent
+    SubscriptionComponent,
+    LoginComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
