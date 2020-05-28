@@ -25,7 +25,7 @@ public class UserController {
         return new UserDto(user.getFirstName(), user.getLastName());
     }
 
-    @PostMapping("/user")
+    @PostMapping("/register")
     public void createUser(@RequestBody @Valid UserCreateDto userCreateDto) {
         userService.createUser(userCreateDto);
     }

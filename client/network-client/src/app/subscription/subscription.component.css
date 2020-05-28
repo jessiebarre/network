@@ -7,16 +7,16 @@ h2 {
 
 p {
     text-align: center;
-    
 }
 
 form {
     margin-top: 15px;
-    border: 2px black solid;
     padding: 2em;
     width: 40%;
-    margin: 0 auto;
+    margin: 35px auto 0 auto;
     background-color: #0CBABA;
+    box-shadow: 0 0 4px rgba(0,0,0,.6);
+    border-radius: 5px;
 }
 
 input {
@@ -24,6 +24,7 @@ input {
     margin: 10px 0;
     border: 0;
     box-shadow: 0 0 4px rgba(0,0,0,.6);
+    border-radius: 4px;
 }
 
 button {
@@ -35,4 +36,21 @@ button {
     border: 0;
     box-shadow: 0 0 4px rgba(0,0,0,.6);
     color: white;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+form > p {
+    font-style: italic;
+    margin-top: 0;
+}
+
+#psswd {
+   display: block;
+   font-size: small;
+   text-align: left;
+   margin-top: -7px;
+   font-style: italic;
 }

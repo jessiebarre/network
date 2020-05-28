@@ -2,43 +2,45 @@
 <p>Vous avez déjà un compte ? <a routerLink>Connectez-vous !</a></p>
 <p>Pour vous inscrire, veuillez remplir les champs ci-dessous :</p>
 
-<form (ngSubmit)="onSubmit(subscriptionForm)" #subscriptionForm="ngForm">
+<form (ngSubmit)="onSubscribe()" #subscriptionForm="ngForm">
+    <p>Tous les champs sont requis</p>
     <div>
         <label for="firstName">Prénom : </label>
         <input type="text"
                 name="firstName"
                 required
-                ngModel>
+                [(ngModel)]="subscriber.firstName">
     </div>
     <div>
         <label for="lastName">Nom : </label>
         <input type="text"
                 name="lastName"
                 required
-                ngModel>
+                [(ngModel)]="subscriber.lastName">
     </div>
     <div>
         <label for="birthDate">Date de naissance : </label>
         <input type="date"
                 name="birthDate"
                 required
-                ngModel>
+                [(ngModel)]="subscriber.birthDate">
     </div>
     <div>
         <label for="email">Email : </label>
         <input type="text"
                 name="email"
                 required
-                ngModel>
+                [(ngModel)]="subscriber.email">
     </div>
     <div>
         <label for="password">Mot de passe : </label>
         <input type="password"
-                name="password"
-                required
-                ngModel>
+        name="password"
+        required
+        [(ngModel)]="subscriber.password">
+        <p id="psswd">Le mot de passe doit comprendre entre 6 et 12 caractères alphanumériques</p>
     </div>
 
-    <button type="submit">Valider</button>
+    <button type="submit" [disabled]="!subscriptionForm.valid">Valider</button>
 </form>
     
